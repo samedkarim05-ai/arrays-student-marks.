@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Learn about arrays through a Student Marks Management System.">
+<title>ArrayWise | Student Marks System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero" id="home">
+  <nav><a class="brand" href="#home">Array<span>Wise</span></a><div><a href="#about">About Arrays</a><a href="#application">Application</a><a href="#demo">Try Demo</a></div></nav>
+  <p class="eyebrow">DATA STRUCTURES · REAL-WORLD APPLICATION</p>
+  <h1>Arrays make data<br><span>easier to manage.</span></h1>
+  <p class="hero-text">Learn how arrays help a Student Marks Management System store marks and calculate results.</p>
+  <a class="button" href="#demo">Try the marks calculator ↓</a>
+</header>
+<main>
+<section class="section" id="about">
+  <p class="eyebrow">01 / THE BASICS</p><h2>What is an array?</h2>
+  <div class="two-col"><div><p class="large">An <b>array</b> is a data structure that stores multiple values of the same type under one variable name. Each value has a position called an <b>index</b>.</p><p>Instead of creating a separate variable for every student's mark, one array can keep all the marks together. In JavaScript, array indexes start at 0.</p></div>
+  <div class="panel"><b>Example: marks array</b><div class="cells"><div><small>Index 0</small><b>75</b></div><div><small>Index 1</small><b>80</b></div><div><small>Index 2</small><b>65</b></div><div><small>Index 3</small><b>90</b></div><div><small>Index 4</small><b>70</b></div></div><p class="muted">One array: <code>[75, 80, 65, 90, 70]</code></p></div></div>
+</section>
+<section class="section tinted">
+  <p class="eyebrow">02 / WHY ARRAYS MATTER</p><h2>Why are arrays important?</h2>
+  <div class="cards"><article><b class="num">01</b><h3>Keep data together</h3><p>Related marks can be stored under one variable name.</p></article><article><b class="num">02</b><h3>Reduce repeated code</h3><p>A loop can process each mark without repeating instructions.</p></article><article><b class="num">03</b><h3>Make calculations easier</h3><p>Calculate totals, averages, highest marks, and lowest marks.</p></article><article><b class="num">04</b><h3>Access values by index</h3><p>Read or update a value using its position in the array.</p></article></div>
+</section>
+<section class="section" id="application">
+  <p class="eyebrow">03 / REAL-WORLD APPLICATION</p><h2>Student Marks Management System</h2>
+  <div class="two-col"><div><p class="large">Schools and teachers need to record and review students' marks. An array stores a set of marks and allows the program to process them together.</p><h3>How it works</h3><ol><li>Store the marks in an array.</li><li>Use a loop to visit each mark and calculate the total.</li><li>Display the average, highest mark, and lowest mark.</li></ol><p class="note"><b>Why arrays are necessary:</b> they keep marks organized and let the same calculation work for every student. A real school system may also use a database to save records permanently.</p></div>
+  <div class="code-panel"><div class="code-heading">JavaScript code example</div><pre><code>const marks = [75, 80, 65, 90, 70];
+let total = 0;
+
+for (let i = 0; i &lt; marks.length; i++) {
+  total += marks[i];
+}
+
+const average = total / marks.length;
+console.log(average); // 76</code></pre><p><code>marks</code> stores the values. The loop processes each element, and <code>marks.length</code> tells us how many values are stored.</p></div></div>
+</section>
+<section class="section tinted" id="demo">
+  <p class="eyebrow">04 / INTERACTIVE DEMONSTRATION</p><h2>Try the marks calculator</h2><p class="muted">Enter five marks from 0 to 100. The website stores them in an array and calculates the results.</p>
+  <div class="calculator"><form id="marksForm"><div class="inputs">
+    <label>Student 1<input type="number" min="0" max="100" value="75" required></label><label>Student 2<input type="number" min="0" max="100" value="80" required></label><label>Student 3<input type="number" min="0" max="100" value="65" required></label><label>Student 4<input type="number" min="0" max="100" value="90" required></label><label>Student 5<input type="number" min="0" max="100" value="70" required></label>
+  </div><button class="button" type="submit">Calculate results</button><p id="message" role="status"></p></form>
+  <div class="results"><div><small>Total marks</small><b id="total">380</b></div><div><small>Average</small><b id="average">76</b></div><div><small>Highest mark</small><b id="highest">90</b></div><div><small>Lowest mark</small><b id="lowest">65</b></div></div>
+  <p class="array-output">Current array: <code id="array">[75, 80, 65, 90, 70]</code></p></div>
+</section>
+<section class="section conclusion"><p class="eyebrow">05 / SUMMARY</p><h2>In conclusion</h2><p>Arrays are useful when a program needs to store and process many related values. In a Student Marks Management System, an array keeps marks together and makes it easier to calculate results with loops. This shows how a basic data structure can solve a real-world problem.</p></section>
+</main><footer>ArrayWise · A learning project about arrays and real-world applications.</footer>
+<script src="script.js"></script>
+</body></html>
